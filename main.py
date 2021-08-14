@@ -8,13 +8,14 @@ from selenium import webdriver
 CHROME_EXECUTED_PATH = "./chromedriver.exe"
 POPCAT_url = 'https://popcat.click/'
 
-
 log = logging.getLogger()
-format = '%(asctime)s: %(message)s'
+log.setLevel(logging.INFO)
+format = '%(message)-50s >>> %(asctime)s'
 
-stream = logging.StreamHandler(stream=sys.stdout)
+stream = logging.StreamHandler(sys.stdout)
 stream.setLevel(logging.INFO)
 stream.setFormatter(logging.Formatter(format))
+
 log.addHandler(stream)
 
 class CountDownTimer:
