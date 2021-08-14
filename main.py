@@ -64,3 +64,5 @@ while log.handlers:
     handler = log.handlers[0]
     handler.close()
     log.removeHandler(handler)
+
+driver.close()
